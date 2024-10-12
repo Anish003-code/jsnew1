@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using the script tag</title>
+</head>
+<body>
+    <script>
+        let a = 9;
+         let b = 10
+         console.log(a + b, a * b, a - b, a % b, a / b);
+         // advantages of using separate script files using src attribute of  script tag .
+         // 2. browser cashing
+
+         // using differnet types of console tag
+         console.log(console)
+         // console.assert(condition, message)  this will only work when the condition is failed otherwise it will not show any messages
+// console.table(data , columns ) shows the data in the tabular form 
+   /* alert("enter your value"); this will create a alert on the page 
+    let ab = prompt("enter your value here"); prompt is used to take the input from the userr
+    a = Number.parseInt(ab) // as prompt convert the value intp string to convert the value into a number or integer than we use this.
+    document.write(ab);   document.write write whatever the value that we have enterd into the prompt on the page */ 
+    alert("enter the value");
+    let ac = prompt("enter here your value");
+    ac = Number.parseInt(ac);
+    alert("your type is "  + (typeof ac));
+    let writee =  confirm("do you want your message to write it on your page"); // this will confirm from the user by giving two option yes or no
+    if(writee){
+        document.write(ac);
+    } else{
+        document.write("pls allow me to write  plssss yrrrrrr");
+    }
+
+    </script>
+
+</body>
+</html>

@@ -22,3 +22,14 @@ console.log(array);
  let namee = "anish"
   let a = Array.from(namee);
   console.log(a[3]);
+
+  let ab = [12,11,100,20,30,1,44]
+  let c  = ab.filter((a) => {
+    return a%10 == 0
+  })
+  console.log(c)
+  let vb =  [1,2,3,4];
+  let v  = prompt("enter the numbers");
+  v = Number.parseInt(v);
+  ab.push(v);
+  console.log(ab)

@@ -62,7 +62,7 @@ num.forEach((Elementt) => { // it will run for each elements
 // ARRAY.from
 
 let namee = "anish";
-let arr = Array.from(namee); // it is saying make an array from the string(namee) 
+let arr = Array.from(namee); //  make an array from the string(namee) 
 console.log(arr); //o/p => ['a','n','i','s','h']
 
 // for...of loop   it is a kind of short cut 
@@ -95,7 +95,8 @@ let arr3 = [1,2,3,4,2,2,1]
 let newarr3 = arr3.reduce((h1,h2) => {
     return h1 * h2
 })
-console.log(newarr3);
+console.log(newarr3);   // reduce return a  value while map and filter return arrayu
+
 
 
 
