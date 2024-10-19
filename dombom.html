@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+ </head>
+ <body>
+  this is me
+   <div>
+
+    <!--here paragraph tag and  span tag  both are siblings with each others and they both arr children of div tag-->
+    <p>
+        this is me brooo!!!
+    </p>
+    <span>
+        this is meeeeee brooooo!!!!!
+    </span>
+   </div>
+  
+
+
+    <script>
+
+   // by using dom we convert our html into js in the form of objectt
+
+   // children
+// as there are parents of a child in a same sense meta tag title all are children of head
+// in the sam way this is me in the body is the child of body tag
+// script is the child of body 
+// head and body are the sibling of each others
+console.log(document.body.firstChild);
+console.log(document.body.lastChild);
+console.log(document.body.childNodes);  // we dont get array
+
+
+
+
+
+
+     </script>
+ </body>
+ </html>   
