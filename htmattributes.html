@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="firstt" class="hey"  data-name = "anish" data-name2 = "priyanan"> 
+        hey i am first container <!--here we have made our own attributes by using data-nameoftheattribute = "value"  
+        we can fetch this value in console simply by using the .element.data.nameoftheattribute
+        -->
+     </div>
+
+     <script>
+    let a = firstt.getAttribute("class");
+    console.log(a);
+    // in the context  of HTML and the DOM (Document Object Model), attributes are special pieces of information
+    // associated with HTML elements. Attributes provide additional details about the element
+    // such as its behavior, appearance, or content.
+    // example 
+    // Standard Attributes: These are predefined attributes that are commonly associated with HTML elements.
+    // 1. id, class, src, herf, style etc
+    // 2. Custom Attributes: In addition to standard attributes, you can define your own attributes, typically using the data-* prefix. These are used to store custom data that can be accessed via JavaScript.
+
+      // data-*: This is a way to add custom data attributes to elements.
+      // example 
+      // <div data-user-id="12345" data-role="admin">User Info</div>
+     // Attributes are placed inside the opening tag of an HTML element and typically follow this format:
+     // <tagname attribute="value">Content</tagname>
+    // this is the syntax for setting a attribute 
+    // element.setAttribute("attributeName", "value");
+    firstt.setAttribute("class", "anish kumar ");
+    // this is the format through which we can remove an attribute.
+// element.removeAttribute("attributename");
+// firstt.removeAttribute("class");
+//firstt.removeAttribute("id");
+let v = firstt.Attribute
+console.log(v);
+console.log(firstt.dataset.name);
+ console.log(firstt.dataset.name2); // accesing our own dataset in the console and this is value that we will get through thid mehods
+ 
+     </script>
+</body>
+</html> 

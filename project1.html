@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ok1">
+        <p id="ok">
+           <h1>welcome to the game!</h1> 
+
+        </p>
+        <style>
+         *{
+            padding: 0%;
+            margin: 0%;
+         }
+            .ok{
+                align-items: center;
+            }
+            #ok1{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </div>
+    <script>
+        alert("Please choose from Snake(S), Water(W), or Gun(G)");
+let p = prompt("Enter your value ").toUpperCase();  // Convert input to uppercase
+let randomnumber = Math.random();
+
+if(randomnumber >= 0 && randomnumber < 1/3) {
+    // Random choice is Snake (S)
+    if(p == 'S') {
+        alert("You lose!");
+    }
+    else if(p == 'G') {
+        alert("It's a draw!");
+    } 
+    else {
+        alert("You win!!!");
+    }
+} 
+else if(randomnumber >= 1/3 && randomnumber < 2/3) {
+    // Random choice is Water (W)
+    if(p == 'S') {
+        alert("You win!!!");
+    } 
+    else if(p == 'G') {
+        alert("You lose!");
+    }
+    else {
+        alert("It's a draw!");
+    }
+} 
+else {
+    // Random choice is Gun (G)
+    if(p == 'S') {
+        alert("It's a draw!");
+    } 
+    else if(p == 'W') {
+        alert("You lose!");
+    } 
+    else {
+        alert("You win!!!");
+    }
+}
+
+    </script>
+</body>
+</html>

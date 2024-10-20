@@ -6,6 +6,53 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!--solutuon one-->
+    <nav id="id11">
+        <li>home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>content</li>
+    </nav>
+    <!-- 2nd solution-->
+    <table>  <!-- browser ultimately put the tbody init even we forget to put it init
+        in viewpage source it will show the raw image totally and doesnot correct the mistsake that we made by not writing the tbody
+        -->
+        <td>hello</td>
+        <td>hello2</td>
+        <td>hello3</td>
+        <td>hello4</td>
+    </table>
+    <style>
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            background-color: cyan;
+        }
+        nav li{
+            padding: 0 23px;
+            list-style: none;
+        }
+
+    </style>
+    <script>
+       // document.getElementsByTagName("nav".firstElementchild.style.color = "red";
+        document.getElementById("id11").firstElementChild.style.color = "green";
+        document.getElementById("id11").lastElementChild.style.color = "red";
+        document.getElementById("id11").style.backgroundColor = "cyan";
+       // here we use array.from because we are using loops here and this is a method of array to use this we have to use array.
+       // “We use `Array.from()` to convert the `HTMLCollection` into an array so we can then use `.forEach()`
+       // to loop through each `<li>` element and set its background to red.”
+        Array.from(document.getElementsByTagName("li")).forEach((Element) => {
+            Element.style.background = "red"
+        })
+        ;
+    </script>
 </body>
 </html>

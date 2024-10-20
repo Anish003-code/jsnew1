@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INnerhtml</title>
+</head>
+
+<body>
+hello  bhai kya  hal hai tere 
+<br>
+
+    <span id="first">hey i am a span</span> <!-- after giving it a id we can acces it on the console on the web by simply writiing first.innerhtml-->
+<p id="abc">
+    hey this is an para
+</p>
+    <script>
+       //console.dier shows properties 
+       //as in object and it shows all the properties that is associtaed with it 
+    console.log(document.body.firstElementChild.firstChild); // it will give span
+    console.log(document.body.firstChild.nodeName); // it will give text
+    console.dir(document.body.firstElementChild.nodeName); // it will show the span
+    
+
+  // with the help of innerhtml we can access and able to change the html value even from the js 
+  // like as id name"abc" in console abc.innerhtml = "write anything" it will also change the value on the page.
+  // outerhtml get the whole value like abc.innerhtml will show hey this is an para while the abc.outerhtml will show <p id = "abc"> hey this is an para </p>
+  // innerhtml onli valid for the elements node 
+  
+  </script> 
+
+</body>
+</html>
