@@ -6,13 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-     <div id="firstt" class="hey"  data-name = "anish" data-name2 = "priyanan"> 
-        hey i am first container <!--here we have made our own attributes by using data-nameoftheattribute = "value"  
+   <!--  <div id="firstt" class="hey"  data-name = "anish" data-name2 = "priyanan"> 
+        hey i am first container here we have made our own attributes by using data-nameoftheattribute = "value"  
         we can fetch this value in console simply by using the .element.data.nameoftheattribute
-        -->
+       
      </div>
-
+ -->
+     <div class="container">
+        <div id="first"> I am a first element</div>
+     </div>
+ 
      <script>
+    /*
     let a = firstt.getAttribute("class");
     console.log(a);
     // in the context  of HTML and the DOM (Document Object Model), attributes are special pieces of information
@@ -39,7 +44,10 @@ let v = firstt.Attribute
 console.log(v);
 console.log(firstt.dataset.name);
  console.log(firstt.dataset.name2); // accesing our own dataset in the console and this is value that we will get through thid mehods
- //  
+ */
+ let div = document.createElement('div');  // Use single or double quotes
+div.innerHTML = '<h1> hello bhai kya hal hai</h1>';  // Use single or double quotes
+
      </script>
 </body>
 </html> 
