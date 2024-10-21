@@ -6,11 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="abc">
+   <!-- <p id="abc">
         this is a text in the element itself
-    </p>
+    </p> -->
+    <div id="ABC" class="c" data-anish="kumar" data-bulbuli="chuimui">
+        this is an div and it is a very big div
+    </div>
     <script>
-        let a = {name: "anish", age: 21};
+      /*  let a = {name: "anish", age: 21};
         let b = 21;
         console.log(b);
         console.dir(b);
@@ -22,6 +25,22 @@
    // hey this is me anish do you remeber me and my work space
    // and the type of things that they are doing it toghter and after the way they are 
  
+ let element = document.getElementById("ABC");
+ console.log(element.hasAttribute("class"));
+ //let d = document.getElementsByClassName("c");
+ // console.log(d.hasAttribute("id"));
+console.log(element.getAttribute("class"));
+ let  c  = element.setAttribute("class" , "anish");
+  console.log() 
+  */
+ let element = document.getElementById("ABC");
+ console.log(element.hasAttribute("class"));
+ console.log(element.getAttribute("class"));
+ let v = element.setAttribute("herf", "https://chatgpt.com/c/6715fffd-0e70-8006-b46f-7f06dc376b3a");
+let c = element.removeAttribute("class");
+console.log(element.dataset.anish);
+console.log(element.attributes);
+console.log(element.dataset.bulbuli);
     </script>
 </body>
 </html>
