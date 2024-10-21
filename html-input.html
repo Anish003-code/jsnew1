@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    i am located outside of the contanier.(first)
-    <div class="container">
+  <!--  i am located outside of the contanier.(first)
+   <div class="container">
         i am start of the container
         <div id="first">j am the first element</div>
         i am end of the container.
     </div>
-    i am at outside of the container(outer).
+    i am at outside of the container(outer).  --> 
+                                                      <!--NEW-->
+     <div id="firstt">hey i am first</div>
+
     <script>
        /*  let div = document.createElement('div'); // This creates a new div element in the DOM (Document Object Model). 
         //The createElement() method is used to create an HTML element of the specified type, in this case, a div.
@@ -30,7 +33,13 @@
 // a.before(div)
 //a.after(div);
 // a.replaceWith(div); */
-
+//firstt.insertAdjacentHTML('beforebegin', '<div class = "test">beforeend</div>');Action: Inserts the HTML content (<div class="test">beforeend</div>) before the firstt element,
+// but still inside the parent element of firstt.
+// firstt.insertAdjacentHTML('beforeend', '<div class = "test">beforeend</div>');Action: Inserts the HTML content at the end of the content inside the firstt element.
+//firstt.insertAdjacentHTML('afterbegin', '<div class = "test">beforeend</div>');Action: Inserts the HTML content at the start of the content inside the firstt element.
+//firstt.insertAdjacentHTML('afterend', '<div class = "test">beforeend</div>');Action: Inserts the HTML content right after the firstt element in the DOM.
+// firstt.remove(); remove the whole line having this id or value of the tag.
+                           //  
 
     </script>
 </body>
