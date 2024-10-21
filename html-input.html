@@ -63,16 +63,20 @@
         firstt.classList.remove("red");
     
                                             // using timeout and timeinterval
+      
      
-     
-     setTimeout(function(){
+      let a = setTimeout(function(){
         document.write("hello bhai kya hal hai ")
      },4000);
      setTimeout(function(){
          alert("this is an alertt!!!")
-     },6000);                       */
+     },6000);                     
    
-
+clearTimeout(a); // this stops the set time out 
+  setInterval(() => {
+    alert("see me readyyy!!!")
+ }, 2000);
+ */
     </script>
 </body>
 </html>
