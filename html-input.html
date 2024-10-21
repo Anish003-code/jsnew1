@@ -13,34 +13,56 @@
         i am end of the container.
     </div>
     i am at outside of the container(outer).  --> 
-                                                      <!--NEW-->
-     <div id="firstt">hey i am first</div>
+                                                      <!--NEW
+     <div id="firstt">hey i am first</div> -->
+                                                      <!--NEW -->
+<div id="firstt" class="yellow text-dark">
+ <span>hey i am fine , u tell ? </span>
+</div>
 
+<style>
+    .yellow{
+        background-color: yellow;
+        color: white;
+    }
+    .red{
+        background-color: red;
+        color: white;
+    }
+    .text-dark{
+        color: black;
+    }
+</style>
     <script>
-       /*  let div = document.createElement('div'); // This creates a new div element in the DOM (Document Object Model). 
-        //The createElement() method is used to create an HTML element of the specified type, in this case, a div.
-        //   The div is stored in the variable div.
-        div.innerHTML = '<h1> hello this is me and my name is anish</h1>';  
-          //This sets the inner HTML content of the div element. Here, the div's content is set to an h1 header that displays the text 
-   //The innerHTML property allows you to define or retrieve the HTML markup inside the element.
-        //document.querySelector('.container').appendChild(div); // This selects the first element in the document with the class name container
-        // using the querySelector() method.
-//The appendChild(div) method adds the previously created div (with the h1 element inside) as a child to the .container element.
-// In simpler terms, this line inserts the newly created div (with the text) into the selected .container element in the webpage.\
-//let a = document.getElementsByTagName('div')[0];
-//a.append(div);
-//a.prepend(div); // the div that we created inside the js will show on the top of the div[0] in the html.
-// a.before(div)
-//a.after(div);
-// a.replaceWith(div); */
-//firstt.insertAdjacentHTML('beforebegin', '<div class = "test">beforeend</div>');Action: Inserts the HTML content (<div class="test">beforeend</div>) before the firstt element,
-// but still inside the parent element of firstt.
-// firstt.insertAdjacentHTML('beforeend', '<div class = "test">beforeend</div>');Action: Inserts the HTML content at the end of the content inside the firstt element.
-//firstt.insertAdjacentHTML('afterbegin', '<div class = "test">beforeend</div>');Action: Inserts the HTML content at the start of the content inside the firstt element.
-//firstt.insertAdjacentHTML('afterend', '<div class = "test">beforeend</div>');Action: Inserts the HTML content right after the firstt element in the DOM.
-// firstt.remove(); remove the whole line having this id or value of the tag.
-                           //  
+        /*  let div = document.createElement('div'); // This creates a new div element in the DOM (Document Object Model). 
+    The createElement() method is used to create an HTML element of the specified type, in this case, a div.
+    The div is stored in the variable div.
+        div.innerHTML = '<h1> hello this is me and my name is anish</h1>';        This sets the inner HTML content of the div element. Here, the div's content is set to an h1 header that displays the text 
+    The innerHTML property allows you to define or retrieve the HTML markup inside the element.
+    document.querySelector('.container').appendChild(div); // This selects the first element in the document with the class name container
+    using the querySelector() method.
+    The appendChild(div) method adds the previously created div (with the h1 element inside) as a child to the .container element.
+    In simpler terms, this line inserts the newly created div (with the text) into the selected .container element in the webpage.\
+    let a = document.getElementsByTagName('div')[0];
+    a.append(div);
+    a.prepend(div); // the div that we created inside the js will show on the top of the div[0] in the html.
+    a.before(div)
+    a.after(div);
+    a.replaceWith(div); 
+    firstt.insertAdjacentHTML('beforebegin', '<div class = "test">beforeend</div>');Action: Inserts the HTML content (<div class="test">beforeend</div>) before the firstt element,
+    but still inside the parent element of firstt.
+    firstt.insertAdjacentHTML('beforeend', '<div class = "test">beforeend</div>');Action: Inserts the HTML content at the end of the content inside the firstt element.
+    firstt.insertAdjacentHTML('afterbegin', '<div class = "test">beforeend</div>');Action: Inserts the HTML content at the start of the content inside the firstt element.
+    firstt.insertAdjacentHTML('afterend', '<div class = "test">beforeend</div>');Action: Inserts the HTML content right after the firstt element in the DOM.
+    firstt.remove(); remove the whole line having this id or value of the tag.
 
+                                                  //   class name and class list
+
+        firstt.className = "text-black red"
+        firsttclass.add("red text-black");
+        firstt.classList.remove("red");
+    */
+   
     </script>
 </body>
 </html>
