@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        /*
+        Asynchronous programming is a method of coding where tasks can be executed out of the main program flow, allowing multiple operations to run
+         concurrently or in the background without waiting for each to complete. 
+        This approach enables a program to remain responsive, especially during tasks that might otherwise take time, like network requests 
+        or reading large files. e.g set timeout 
+
+        synchronious ==> Synchronous programming is a programming model where tasks are executed sequentially, one at a time, in a blocking manner.
+         This means that each operation must complete before the next one begins. In synchronous code, if an operation takes time—like reading
+         a large file or making a network request—the entire program pauses and waits for that task to finish before moving on to the next one.
+
+         
+        */
+        function fetchData(callback) {
+  setTimeout(() => {
+    const data = "Sample Data";
+    callback(data); // Callback function is called after 2 seconds
+  }, 2000);
+}
+
+fetchData((data) => {
+  console.log("Data received:", data); // Output after 2 seconds: Data received: Sample Data
+});
+function saynmste(name){
+    console.log("nmste" + name + "!!!");
+}
+saynmste("anishh");
+
+
+
+
+     </script>
+</body>
+</html>

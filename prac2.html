@@ -1,46 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-   <!-- <p id="abc">
-        this is a text in the element itself
-    </p> -->
-    <div id="ABC" class="c" data-anish="kumar" data-bulbuli="chuimui">
-        this is an div and it is a very big div
+ </head>
+ <body>
+    <div>   
+        <!--giving button a class is not a  good idea beacause class is not unique
+          but id is bacause it is unique-->
+        <button id="ab"> 
+        > CLICK ME </button>
     </div>
     <script>
-      /*  let a = {name: "anish", age: 21};
-        let b = 21;
-        console.log(b);
-        console.dir(b);
-        console.log(a);
-        console.dir(a);
-        // innerhtml allows us to get the element inside the element only
-        // outerhtml allows help us to get the whole element along with the elements that it has 
-
-   // hey this is me anish do you remeber me and my work space
-   // and the type of things that they are doing it toghter and after the way they are 
- 
- let element = document.getElementById("ABC");
- console.log(element.hasAttribute("class"));
- //let d = document.getElementsByClassName("c");
- // console.log(d.hasAttribute("id"));
-console.log(element.getAttribute("class"));
- let  c  = element.setAttribute("class" , "anish");
-  console.log() 
-  */
- let element = document.getElementById("ABC");
- console.log(element.hasAttribute("class"));
- console.log(element.getAttribute("class"));
- let v = element.setAttribute("herf", "https://chatgpt.com/c/6715fffd-0e70-8006-b46f-7f06dc376b3a");
-let c = element.removeAttribute("class");
-console.log(element.dataset.anish);
-console.log(element.attributes);
-console.log(element.dataset.bulbuli);
-    </script>
-</body>
-</html>
+        // event meaning that something has happend and in  we have lot of control onn whatever that has happne 
+        // over it
+        function handle(clickme){
+            console.log("hey guys how are you");
+        }
+    ab.addEventListener('click', function(e){
+        alert("are dba dia bhai tune")
+    })
+    ab.addEventListener('click', handle);
+   // ab.removeEventListener('click', handle);
+        </script>
+ </body>
+ </html>
