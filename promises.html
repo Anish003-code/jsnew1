@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+
+        /*
+        In JavaScript, a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+ It provides a way to handle asynchronous operations, like fetching data from a server or waiting for a timeout, without getting stuck in 
+  callback hell (nesting multiple callback
+
+ Key Points of a Promise:
+ promise has three states:
+
+Pending: The initial state, meaning the operation hasn’t completed yet.
+Fulfilled: The operation completed successfully.
+Rejected: The operation failed.
+Usage:
+
+Promises have .then() and .catch() methods for handling fulfilled and rejected results.
+.then() is called when the promise is resolved successfully.
+.catch() is called if the promise is rejected due to an error.
+        
+syntax
+let p =  new Promise((resolve,reject) => {});  here the letter p of the promise  should be in capital
+*/
+let p = new Promise((resolve,reject) =>{
+console.log("hey this is me starting of the code")
+resolve("promise is resolved succesfully")  // this is the message that can be easily caught by using .then message .
+})
+let k = new Promise((resolve,reject)=>{
+    reject(new Error("something went wrong")) // if the code is rejecte , then this code will be seen in the console.
+})
+p.then((message)=>{
+    console.log("the code is successfully resolved abc"); // if the code is resolved, then this message is seen in the console
+})
+     
+let a = new Promise((resolve,reject)=> {
+    console.log("this is the starting of code1");
+   // resolve("the code is resolved succesfully");
+   reject("there is an error bhai ")
+}) 
+a.then((message)=> {
+    console.log(message);
+})   /*
+ The .then() method is used with promises to specify what should happen when the promise is fulfilled (resolved).
+  If the promise a is resolved successfully, it will call the function passed to .then().
+Callback Function in .then():
+
+Inside .then(), we pass a callback function (message) => { console.log(message); }.
+This callback function takes one parameter, message, which represents the resolved value of the promise.
+Logging the Resolved Value:
+
+If a is resolved with a value, this callback function will run and log the message to the console.
+*/
+a.then((message)=>{
+    console.log(message); 
+})
+ /* 
+ for error 
+ .catch((error) => {
+    console.error(error);
+ */
+ let c = new Promise((resolve,reject)=>{
+    console.log("this is the pre proccessing value");
+    reject(new Error("this is some issue with the function"))
+ })
+
+ c.catch((error)=>{
+    console.log("er catch the error and handle it perfectly") // here we can the error and handle it 
+ })
+     </script>
+</body>
+</html>
