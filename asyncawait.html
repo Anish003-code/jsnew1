@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+async and await are keywords in JavaScript that make it easier to work with promises by allowing asynchronous code to be written in a
+ way that looks more like synchronous code. They help avoid deeply nested .then() chains and make the code easier to read and understand.
+*/
+async function anish(){  // async agr kisi function k phle lga dia to ensure ho jata hai ki wo promise return krega  
+    return "anish";
+}
+anish().then((x)=>{
+     console.log(x)
+})
+    
+async function anish(){
+    let delhiwheather = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("27 deg")
+        }, 1000)
+    })
+    let bangaloreweather = new Promise((resolve,reject) =>{
+        setTimeout(()=>{
+            resolve("21 deg")
+        }, 4000)
+       
+    })
+}
+// now here we can catch the resolve value of the delhi and banglore 
+let delhiw = await delhiwheather; // jbtk delhiweather nhi mil rha tbtk ruka rhega delhiw aur jbtk iski value nhi ,mil jaati tbtk yr aage 
+// nhi bdhega meaning that a async function acting like a sync function where it is waiting for the funtion to execute and then it will move further 
+
+let banglow = await bangaloreweather; // jbtk bangloreweather nhi mil rha tbtk ruka rhega banglow simply meaning that jbtk promise fullfilled nhi ho jati 
+return[delhiw,banglow]
+
+// different async function executes at same time
+
+
+    </script>
+</body>
+</html>
