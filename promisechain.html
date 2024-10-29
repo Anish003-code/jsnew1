@@ -30,8 +30,21 @@ p.then((value)=>{
 }).then((value) =>{
     console.log("we are done "); // once the value of p2 retuned then the value inside the conspole will be printed on the webpage.
 })     */
-
-
+                          // handling more than one handler in our promise 
+   /* let a = new Promise((resolve,reject) =>{
+        setTimeout(()=>{
+            console.log("hey i am delayed by 2 sec")
+            resolve(1);
+        }, 2000)
+    })
+    // below there are multiple handlers on a single promise 
+     a.then(()=>{
+        console.log("this is now resolved after 2 sec")
+     })
+     a.then(()=>{
+        alert("this is an alert to tell you that this is resolved")
+     })  */
+    //                                                         promise API
 
 
     </script>
