@@ -55,8 +55,21 @@ catch(error){ // agr fir bhi error aata h to console m throw mt kr simply usko l
          
     },2000);
     //                                                    ERROR OBJECT 
+    /*
+    The Error object in JavaScript represents an error that occurs during the execution of code. When an error occurs,
+     JavaScript creates an instance of this Error object, which contains information about the error. 
+     You can also create your own Error objects to throw custom errors.
+     asic syntax of the custom error 
+     let error = new Error("This is an error message.");
+      Here, "This is an error message." is the message passed to the Error object, which helps identify or describe the issue.
+     * /
  
-
+try {
+    anish
+} catch (error) {
+    console.log(error.message)  //  this will give the message of the error 
+    console.log(error.name) // this will give the name of the of the error 
+}
 </script>
 </body>
 </html>
