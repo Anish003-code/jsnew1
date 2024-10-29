@@ -46,7 +46,32 @@ p.then((value)=>{
      })  */
     //                                                         promise API
 
-
+let p = new Promise((resolve,reject) =>{
+        setTimeout(() => {
+            resolve("value 1")
+        },2000);
+});
+let p1 = new Promise((resolve,reject) =>{
+        setTimeout(() => {
+            resolve("value 2")
+           // reject("this is an error")
+        },2000);
+});
+let p2 = new Promise((resolve,reject) =>{
+        setTimeout(() => {
+            resolve("value 3")
+        },200);
+});  // all these promises will launch at the sametime
+// now suppose i want somthing to write on the console  when all the promises fullfilled 
+   // using the api
+   //let all = Promise.all([p,p1,p2]) romise.all([]) will get the value of all the resolved promises , if there is an error in any of these 
+   // promises then this will not work.  
+   // let all = Promise.allSettled([p,p1,p2])  this will give the value irrespective of the error 
+  // let all = Promise.any([p,p1,p2]) this is same as the race but it will  still give the values if it it rejectd then the next value is considerd
+ //  let all = Promise.race([p,p1,p2])  tells which value resolve fastest but donesnot work if there is an error 
+   all.then((value) =>{ 
+    console.log(value) // here we can print the values of the resolved values 
+   })
     </script>
 </body>
 </html>
