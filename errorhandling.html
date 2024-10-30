@@ -96,7 +96,27 @@ stack:- A string that shows the stack trace (list of function calls leading to t
 This is helpful for debugging as it shows where the error occurred.
 javascript
 console.log(error.stack); // Logs the stack trace
+*/  
+//                                                                finally
+try {
+    console.log(program)
+} catch (error) {
+    console.log(error.name)
+    console.log("this is an error")
+}
+finally{
+    console.log("this is me and i am inside finally")
+}
+/* why we use finally ==> 
+we are using this suppose there is error inside try and the catch detect and hadle it but what if there is an error inside the catch then 
+in that case the finally comes in the picture it will run if either of the try and catch run and if remove finally and still write something 
+in the next line of the catch then it will not run.
+In JavaScript, the finally block is used in a try...catch...finally statement to ensure that certain code runs regardless of whether an error
+ was thrown or not. It’s especially useful for cleanup tasks or final actions that should always happen after a try or catch operation, 
+ such as closing a file, clearing a timer, or resetting certain variables.
+ Using finally ensures the resource is always closed, making the function more robust and error-resistant.
 */
+//                                                                 END of ch-9
 </script>
 </body>
 </html>

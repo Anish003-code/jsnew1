@@ -12,13 +12,17 @@
         In JavaScript, a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
  It provides a way to handle asynchronous operations, like fetching data from a server or waiting for a timeout, without getting stuck in 
   callback hell (nesting multiple callback
-
+it is not necessary that the code has to be async in nature it can be sync but it is more beneficial in handling in the async code 
+instead of immediately returning the final value, the asynchronous method 
+returns a promise to supply the value at some point in the future.
+A promise is said to be settled
+ if it is either fulfilled or rejected, but not pending.
+ 
  Key Points of a Promise:
  promise has three states:
-
-Pending: The initial state, meaning the operation hasn’t completed yet.
-Fulfilled: The operation completed successfully.
-Rejected: The operation failed.
+Pending:- The initial state, meaning the operation hasn’t completed yet.
+Fulfilled:- The operation completed successfully.
+Rejected:- The operation failed.
 Usage:
 
 Promises have .then() and .catch() methods for handling fulfilled and rejected results.

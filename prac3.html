@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <button id="abc">
+     click me 
+        </button>
+    
+    <button id="ab">click me again</button>
+    <script>
+   let a = new Promise((resolve,reject)=>{
+    console.log("i am starting of the code ")
+    setTimeout(() => {
+        reject("there is an error ")
+    },  2000);
+    console.log("i am ending of the code ")
+   })
+   
+    let b = Promise.resolve(23);
+    b.then((value)=>{
+        console.log(value)
+    })
+a.catch((error)=>{
+    console.log("there is an error that has occured")
+})
+    </script>
+</body>
+</html>
