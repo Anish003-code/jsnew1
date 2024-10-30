@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sendig the network request using the js     
+         let p = fetch("https://goweather.herokuapp.com/weather/delhi"); // here p is a promise 
+       p.then((response)=>{
+        return response.json()
+       }).then((response)=>{
+        console.log(response)
+       })
+        /*
+        whenerv we fetch the value then we get a promise, this promise resolve in another promise and the value of this promise is the final 
+        result 
+        explanation
+ we are  using fetch to make an HTTP request to get the weather information. fetch returns a promise that, when resolved, provides a 
+ Response object. To access the actual JSON data in the response, you need two .then() methods. Here’s why:
+1. First .then(): When you call fetch, it returns a promise that resolves to a Response object (not the actual data). In the first .then(),
+ you get the Response object as value, and you call value.json(), which is a method to parse the response into JSON. value.json() itself 
+ returns another promise because parsing the data takes time.
+code =>
+p.then((value) => {
+    return value.json(); // returns a promise
+})
+Second .then(): Since value.json() returns a promise, you need a second .then() to handle the parsed JSON data when it's ready. The second
+ .then() receives the parsed JSON as value1, which is the actual weather data you're looking for. You can then log it or use it as needed.
+javascript
+Copy code
+.then((value1) => {
+    console.log(value1); // `value1` is the JSON data
+});
+So, in summary:
+The first .then() handles the response and returns a promise to parse JSON.
+The second .then() waits for the JSON parsing to complete and then works with the actual data.
+This chaining structure is necessary because fetch involves asynchronous operations at multiple stages (fetching and parsing), 
+and each stage returns a promise that you handle sequentially with .then().
+parsing JSON means converting a JSON-formatted string into a JavaScript object that you can use in your code.
+        */
+    </script>
+    </body>
+</html>
