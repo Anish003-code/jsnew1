@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //1. using tge json placeholder free fake api
+
+let options = { // as option are object
+    method: 'POST',
+    headers: {
+    'Content-type': 'application/json',
+  },
+    body: JSON.stringify({  // JSON.stringify this onverts js object into the string and JSON.parse converts a valid string into the js object
+    title: 'ANISH',
+    body: 'BHAI',
+    userId: 1,
+}),
+}
+fetch('https://jsonplaceholder.typicode.com/posts',options)
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+
+        /*
+        A POST request with fetch is used to send data from the client to a server. This is common when you want to submit form data, 
+        create new resources, or send information that the server will process in some way.
+Here's a breakdown of how a POST request works with fetch:
+1.Setup: In a POST request, you define the URL, specify the HTTP method as POST, and include any data you want 
+to send in the body of the request. This data is typically in JSON format and can include things like form inputs, JSON objects, or other data.
+2.Headers: You usually set headers, especially Content-Type, to tell the server what kind of data you’re sending. When sending JSON data,
+ set Content-Type to "application/json".
+3. Response Handling: Just like with GET requests, fetch returns a promise. You can use .then() to handle the server’s response.
+
+Key Parts Explained:=
+
+URL: The endpoint where you’re sending the request.
+Method: Set to "POST" for posting data.
+Headers: "Content-Type": "application/json" indicates you’re sending JSON data.
+Body: Use JSON.stringify(data) to convert a JavaScript object into a JSON string. This is necessary because the fetch API expects a string 
+for the request body.
+
+Workflow of the POST Request=>
+
+The client sends data to the server.
+The server receives and processes the data (e.g., saving it to a database).
+The server often sends a response back, which you can handle in the .then() chain.
+Using fetch for POST requests makes it easy to send data to an API, handle responses, and perform error handling.
+
+
+
+
+
+
+
+        */
+    </script>
+</body>
+</html>
