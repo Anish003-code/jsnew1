@@ -15,7 +15,7 @@ let options = { // as option are object
     headers: {
     'Content-type': 'application/json',
   },
-    body: JSON.stringify({  // JSON.stringify this onverts js object into the string and JSON.parse converts a valid string into the js object
+    body: JSON.stringify({  // JSON.stringify this converts js object into the string and JSON.parse converts a valid string into the js object
     title: 'ANISH',
     body: 'BHAI',
     userId: 1,
@@ -58,13 +58,52 @@ The server receives and processes the data (e.g., saving it to a database).
 The server often sends a response back, which you can handle in the .then() chain.
 Using fetch for POST requests makes it easy to send data to an API, handle responses, and perform error handling.
 
+both method and body are options you can use in the fetch API in JavaScript. Here’s a breakdown of their purposes:
+method: This option specifies the HTTP method for the request, such as "GET", "POST", "PUT", "DELETE", etc. By default, fetch uses
+ the "GET" method if no method is specified.
 
+Copy code
+fetch(url, {
+  method: "POST",
+});
+body: This option contains the data you want to send with your request. Typically, this is used with methods like "POST" or
+ "PUT" to send data to the server. For example, if you're sending JSON data, you would stringify it and set the appropriate headers.
 
+Copy code
+fetch(url, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ key: "value" })
+});
 
+So, yes, method and body are indeed part of the options you can configure in a fetch request.       
+*/
 
+        //                                                   HTTP
+/*
 
-
-        */
+HTTP, or HyperText Transfer Protocol, is the foundation of communication on the web. It defines how data is requested and transferred between a
+ client (usually a web browser) and a server. Here’s a quick overview:
+Client-Server Model: HTTP operates based on a request-response model. The client (like a browser or an app) sends an HTTP request to the server,
+ and the server responds with the requested data or an error message.
+Stateless: HTTP is stateless, meaning each request is independent and does not retain information about previous requests. 
+This characteristic simplifies interactions but requires additional mechanisms like cookies to track sessions.
+Methods: HTTP has several request methods, including:
+GET: Requests data from a server without modifying it.
+POST: Submits data to a server, often used in forms or file uploads.
+PUT: Updates data on the server.
+DELETE: Deletes data on the server. 
+Status Codes: HTTP responses come with status codes that indicate the result of the request:
+200: Success (OK)
+404: Not Found (resource doesn’t exist)
+500: Internal Server Error (problem on the server)
+Secure Version (HTTPS): HTTPS is the secure version of HTTP. It encrypts data using SSL/TLS, ensuring that data transferred between the 
+client and server is private and protected.
+HTTP is essential for web browsing, APIs, and many other internet-based applications, as it enables standardized communication across
+ diverse system
+*/ 
     </script>
 </body>
 </html>
