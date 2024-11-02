@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// whenever we use document.cookie = something  it doesnot replaces the values rather it adds the value into it
+// for example 
+console.log(document.cookie)
+document.cookie = "name= anish003"
+ document.cookie = "name2 = anish0034" // here name = anish0034 wouldnot work as  it becomes the same value then it will replace the previous 
+ // value
+ document.cookie = "name = anishkumr" //  now this will update the value of the name cookie and the updated value of the name is anishkumr 
+ // rather than anish003 
+ //they work in key-value pair 
+ console.log(document.cookie)
+ let key = prompt("enter your key");
+ let value = prompt("enter your value");
+ document.cookie = `${encodeURIComponent(key)} = ${encodeURIComponent(value)}`
+
+ console.log(document.cookie);
+ /*
+ In JavaScript, encodeURIComponent() is a function that encodes a URI (Uniform Resource Identifier) component by replacing each instance of
+ certain characters with one, two, three, or four escape sequences representing the UTF-8 encoding of the character. This is useful for
+  encoding individual parts of a URI, such as query parameters, rather than the entire URI.
+
+Key Points
+
+encodeURIComponent() escapes all characters that have a special meaning in URIs, including &, =, ?, /, #, and :, by replacing them with their
+ corresponding UTF-8 encoded representations (e.g., %20 for a space).
+This function is commonly used to encode query string parameters to ensure they’re interpreted correctly by the server, even if they contain
+ special characters.
+Example
+
+javascript
+Copy code
+let queryParam = "hello world&name=John Doe";
+let encodedParam = encodeURIComponent(queryParam);
+
+console.log(encodedParam);  // Output: "hello%20world%26name%3DJohn%20Doe"
+Use Case
+When sending data in URLs, encodeURIComponent() ensures that special characters (like &, =, and spaces) don’t interfere with the 
+structure of the URL and are transmitted correctly.
+
+Common Use with URLs
+javascript
+Copy code
+let baseUrl = "https://example.com/search";
+let query = "JavaScript & React";
+let fullUrl = `${baseUrl}?q=${encodeURIComponent(query)}`;
+
+console.log(fullUrl);  
+// Output: "https://example.com/search?q=JavaScript%20%26%20React"
+In this example, the special characters (& and space) are safely encoded, so the URL will work as expected.
+
+to decode it we use decodeURIcomponent(encoded value)
+ 
+
+ let a = "my aname is anish and my password is abc"
+ let codeda  = encodeURIComponent(a);
+ console.log(codeda)
+ console.log(decodeURIComponent(codeda))
+ */
+    </script>
+</body>
+</html>
