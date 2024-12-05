@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    Object-Oriented Programming (OOP) is a programming paradigm that organizes code into reusable and logical
+     structures called objects, which model real-world entities and behaviors. OOP helps make software more modular, 
+     easier to maintain, it has four pillars as 1.encapsulation, 2.inheritance, 3.polymorphism, and 4.abstraction.
+Core Concepts of OOP:
+Objects:
+Objects are instances of classes. They encapsulate data (attributes) and behavior (methods).
+Example: A "Car" object might have attributes like color and brand, and methods like drive() or stop().
+Classes:
+A class is a blueprint for creating objects.
+It defines the structure (attributes) and behavior (methods) that objects of the class will have.
+Example: A Car class can define that all cars have attributes like color and brand.
+Encapsulation:
+Bundles data (attributes) and methods that operate on the data into a single unit (class).
+It often restricts direct access to some components, enforcing controlled interaction through methods.
+Example: You might use methods like getSpeed() to access a private attribute speed.
+Inheritance:
+Allows one class (child) to inherit attributes and methods from another class (parent).
+Promotes code reuse and hierarchical classification.
+Example: A SportsCar class might inherit from a Car class but add features like turboBoost().
+Polymorphism:
+Enables objects of different classes to be treated as objects of a common parent class, often through method overriding or interfaces.
+Example: Both Dog and Cat can inherit from an Animal class, and a method makeSound() might behave differently for each.
+Abstraction:
+Focuses on hiding implementation details and showing only essential features.
+Typically implemented using abstract classes or interfaces.
+Example: A Shape class might define a method calculateArea() without specifying how it’s calculated; subclasses like Circle
+ and Rectangle provide the implementation.
+Benefits of OOP:
+Modularity: Code is organized into objects and classes, making it easier to understand and modify.
+Reusability: Classes and objects can be reused across different parts of a program or in other programs.
+Scalability: Easy to add new features or modify existing ones.
+Maintainability: Encapsulation ensures changes to one part of the code don’t affect unrelated parts.
+    -->
+<script>
+    let a = {
+        name: "anish",
+        class: "this"
+    }
+console.log(a);
+let p = {
+    run: ()=> {
+        alert('bhaaaag');    }
+}
+  a.__proto__=p
+ a.run();
+
+/*
+  
+This code demonstrates how JavaScript's prototype chain works and how you can dynamically add functionality to an object using 
+the __proto__ property (though this is generally discouraged in modern JavaScript).
+explanatio :-
+
+1.Object a Creation:-
+let a = {
+    name: "anish",
+    class: "this"
+};
+You create an object a with two properties:
+name with the value "anish"
+class with the value "this"
+At this point, a has no methods, and it inherits from the default Object.prototype.
+2. Object p Creation:
+javascript
+Copy code
+let p = {
+    run: () => {
+        alert('bhaaaag');
+    }
+};
+You create another object p with a single method run, which displays an alert with the message "bhaaaag" when called.
+4. Changing a's Prototype:
+a.__proto__ = p;
+The __proto__ property allows you to manually set the prototype of a to p.
+Now, a inherits from p. This means:
+If a property or method is not found directly on a, JavaScript will look for it on p (and then further up the prototype chain if necessary).
+5. Calling a.run():
+ 
+a.run();
+When you call a.run(), JavaScript doesn’t find a run method on a directly.
+It then looks up the prototype chain and finds the run method on p.
+The run method on p executes, showing an alert with the message "bhaaaag".
+Key Concepts Demonstrated:
+Prototypes in JavaScript:
+
+Objects in JavaScript have an internal property called [[Prototype]] that determines their inheritance.
+The __proto__ property is a way to access and modify the [[Prototype]] of an object, though it’s considered better practice to use
+ Object.create() or Object.setPrototypeOf() in modern JavaScript.
+Prototype Chain:
+
+If a property or method isn’t found on an object, JavaScript checks its prototype (and continues up the chain if needed) until it reaches null.
+Dynamic Inheritance:
+
+You dynamically assign p as the prototype of a, adding new functionality (run()) to a.
+Modern Approach:
+Using __proto__ is not recommended because it’s deprecated for performance reasons. Instead, use Object.setPrototypeOf():
+
+code=> 
+Object.setPrototypeOf(a, p);
+a.run();
+*/
+
+
+ // example of chain
+
+ let b = {
+    name1: "anish",
+    class: 10
+ }
+ let c = {
+    name2: "kumar",
+    class3: 11
+ }
+ c.__proto__ = {
+    name: "anishhhhh"
+ }
+ console.log(b.name)
+</script>
+
+</body>
+</html>

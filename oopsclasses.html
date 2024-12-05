@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        classes 
+Class Declaration: Classes are declared using the "class" keyword.
+Example:
+       class Person {
+  name;
+
+  constructor(name) {
+    this.name = name;
+  }
+
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name}`);
+  }
+}
+Components of the Class:
+Property Declaration: The name property represents an attribute of the class.
+Constructor Method: A special method, constructor, initializes new instances of the class with specific values (e.g., setting the name).
+Instance Method: introduceSelf() is a method that uses this to access and manipulate the instance’s properties.
+Property Declaration Details:
+
+Explicitly declaring properties (e.g., name;) is optional.
+If omitted, the this.name = name; line in the constructor will automatically create the property and assign its value.
+Declaring properties explicitly in the class can improve code readability by clearly listing all attributes associated with the class.
+Properties can also be initialized with default values directly (e.g., name = '';).
+Understanding the Constructor:
+
+The constructor is defined using the constructor keyword.
+Its primary functions include:
+Creating a new object: It sets up a fresh instance of the class.
+Binding this: The keyword this refers to the newly created object within the constructor.
+Executing Code: It runs any custom initialization logic provided in its body.
+Returning the Object: It implicitly returns the newly created object.
+Creating and Using Class Instances:
+
+Instances of a class are created using the new keyword followed by the class name.
+Example of creating and using a Person instance:
+js
+Copy code
+const giles = new Person("Giles");
+giles.introduceSelf(); // Hi! I'm Giles
+The new keyword:
+Invokes the constructor.
+Automatically sets up the new object according to the class definition.
+Returns the created object for further use.
+Why Use Classes?
+
+Classes provide a clean and organized syntax for defining object blueprints.
+They help encapsulate properties and methods, making code more modular and reusable.
+The structure mimics classical object-oriented programming, which is familiar to developers from other programming languages.
+        */
+
+
+        
+    </script>
+</body>
+</html>
