@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> stati methods </title>
+</head>
+<body>
+    <script>
+class animal{
+    constructor(name){
+        this.name = name
+    }
+    walk(){
+        alert("animal " + animal.capitalize(this.name) +" is walking!!")
+    }
+    static capitalize(name){
+        return name.charAt(0).toUpperCase() + name.substr(1,name.length)
+     }
+}  
+let a = new animal("mukuur")
+a.walk()
+ 
+/*
+A static method is a method in a class that is bound to the class itself, rather than instances of the class. It can be called 
+directly on the class without the need to create an instance. Static methods
+ are typically used for utility functions, factory methods, or functionality that doesn't rely on an instance's propertie
+*/
+    </script>
+</body>
+</html>
