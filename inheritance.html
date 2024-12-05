@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*                                                  inheritance
+In programming, inheritance refers to passing down characteristics from a parent to a child so that a new piece of code can reuse and 
+build upon the features of an existing one. JavaScript implements inheritance by using objects. Each object has an internal link to another 
+object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype
+. By definition, null has no prototype and acts as the final link in this prototype chain. 
+It is possible to mutate any member of the prototype chain or even swap out the prototype at runtime
+*/ 
+class animal{
+    constructor(name,color){
+        this.name = name 
+        this.color = color
+    }
+    shout(){
+        console.log(this.name + " is shouting very havily")
+    }
+    colorr(){
+        console.log(this.color + " is not a oold fashioned player to talk about")
+    }
+}
+
+
+// using inheritance 
+ class gorilla extends animal{
+    eat(){
+        console.log(this.name + " is eating banana")
+    }
+ }
+ 
+ let a = new animal("kukuur", "orange")
+ let b = new gorilla("boka", "black")
+ b.eat()
+ b.shout()
+ a.shout()
+ a.colorr()
+ a.eat() // tbis will through an error as it  is not defined to it  
+
+
+  /*                                  Example of the inhertinace 
+
+
+  1. class keyword: Used to define both parent and child classes.
+  2. extends keyword: Indicates that ChildClass inherits from ParentClass.
+
+  class ParentClass {
+  constructor(property) {
+    this.property = property;
+  }
+
+  method() {
+    console.log("This is a method in the parent class.");
+  }
+}
+
+class ChildClass extends ParentClass {
+  constructor(property, childProperty) {
+    super(property); // Call the parent class constructor
+    this.childProperty = childProperty;
+  }
+
+  childMethod() {
+    console.log("This is a method in the child class.");
+  }
+}
+
+  */
+
+
+    </script> 
+</body>
+</html>
