@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*                                          getter and setters 
+ In JavaScript, getters and setters are special methods that allow you to define how properties of an object are accessed and 
+ modified. They are commonly used to add additional logic when retrieving or updating an object's properties.
+
+What is a Getter?
+A getter is a method that gets the value of a property. It allows you to define a custom way of returning a property's value while
+ keeping it accessible like a normal property.
+Syntax:
+get propertyName() {
+  // Logic to return the value
+}
+
+Example:
+javascript
+Copy code
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  // Getter for fullName
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person = new Person("John", "Doe");
+console.log(person.fullName); // "John Doe"
+                                            EXPNATION TO THE CODE 
+ 
+class Person {
+This defines a new class called Person.
+Classes in JavaScript are templates for creating objects and allow encapsulation of data and behavior.
+Constructor
+javascript
+Copy code
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+The constructor method is a special function that is automatically called when a new instance of the Person class is created.
+Parameters:
+firstName: Represents the first name of the person.
+lastName:  Represents the last name of the person.
+Assignments:-
+this.firstName assigns the value of the firstName parameter to the instance property firstName.
+this.lastName assigns the value of the lastName parameter to the instance property lastName.
+Getter for fullName
+javascript
+Copy code
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+This defines a getter named fullName.
+Purpose:
+The getter allows the fullName property to be accessed like a normal property (e.g., person.fullName), even though it executes a function.
+
+++=>                                   
+                                             explanation to this line 
+                                             
+In JavaScript, when you use a getter, it makes a function look like a regular property. This means you don’t need to call it with parentheses 
+like a normal function.
+Without a Getter
+Let’s say you want to get a person’s full name from their first and last names. Normally, you would write a method like this:
+code=> 
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  // Regular method
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person = new Person("John", "Doe");
+console.log(person.getFullName()); // "John Doe" (requires parentheses)
+Here, you have to call getFullName() using parentheses () to get the full name.
+
+With a Getter
+With a getter, you don’t need parentheses. You can simply access it like a property, even though it’s still running a function in the 
+background.
+
+javascript
+Copy code
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  // Getter
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person = new Person("John", "Doe");
+console.log(person.fullName); // "John Doe" (no parentheses needed)
+Q. Why This is Useful
+soln-> Looks Cleaner: Instead of calling a method like person.getFullName(), you can simply write person.fullName. It feels like you’re 
+accessing a property, even though some logic is being executed.
+Encapsulation: The logic for computing fullName is hidden from the user. They just see it as a property
+
+<=++
+Logic:
+It returns a string template (${this.firstName} ${this.lastName}) that combines the firstName and lastName properties with a space in between.
+Creating an Instance
+javascript
+Copy code
+const person = new Person("John", "Doe");
+What happens here?
+The new Person("John", "Doe") creates a new instance of the Person class.
+The constructor is called, with "John" passed as firstName and "Doe" passed as lastName.
+The firstName and lastName properties are initialized with these values in the new person object.
+
+What is a Setter?
+A setter is a method that sets the value of a property. It allows you to define custom logic when a property is updated, 
+such as validation or updating related values.
+
+Syntax:
+javascript
+Copy code
+set propertyName(value) {
+  // Logic to set the value
+}
+Example:
+javascript
+Copy code
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  // Setter for fullName
+  set fullName(name) {
+    const parts = name.split(" ");
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  }
+}
+
+const person = new Person("John", "Doe");
+person.fullName = "Jane Smith"; // Invokes the setter
+console.log(person.firstName); // "Jane"
+console.log(person.lastName);  // "Smith"
+Benefits of Getters and Setters
+Encapsulation: Control how data is accessed or modified without exposing the internal implementation.
+Validation: Add checks or validation when setting a value.
+Computed Properties: Calculate values dynamically when accessing or updating properties.
+        */
+    </script>
+</body>
+</html>
