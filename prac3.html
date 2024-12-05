@@ -3,11 +3,39 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>constructor</title>
  </head>
  <body>
     <script>
-        // 
-    </script>
+
+ class Railwayform{
+   constructor(name,traino,add,phoneno){
+      this.name = name
+      this.traino = traino
+      this.add = add
+      this.phoneno = phoneno
+   }
+   preview(){
+      alert(this.name + " your form is waiting to be submited with train number : " + this.traino + " your address is : " + this.add +
+      " with phone number: " + this.phoneno)
+   }
+   submit(){
+      alert(this.name + " your form is submited with train number : " + this.traino + " your address is : " + this.add +
+      " with phone number: " + this.phoneno)
+   } 
+   cancle(){
+      this.phoneno = 0
+      this.add = 0
+      alert(this.name + " your form is cancelled with train number: " + this.traino + " your address is: " + this.add +
+      " with phone number: " + this.phoneno)
+   }
+
+}
+
+ let anishform = new Railwayform("Anish",122342,"washinton dc,3rd block first floor",7876632981)
+ anishform.submit()
+ anishform.cancle() // as preview is later called this values of phoneno and add will be changed in the  preview 
+ anishform.preview()
+     </script>
  </body>
  </html>

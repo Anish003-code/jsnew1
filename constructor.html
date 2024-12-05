@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                                    // constructor
+        class Railwayform{
+            // constructor is always called whenever we make object form any  class it is simply a method 
+            constructor(name,traino){
+     console.log("constructor is called" + name + " " + traino)
+     this.name = name 
+     this.traino = traino
+     // by using this there is no need for us to use the property of fill again  and again
+            }
+            submit(){
+                alert(this.name + " your form is submitted with train number: " + this.traino)
+            }
+            cancel(){
+                alert(this.name + " your form is cancelled with tr in number: " + this.traino)
+            }
+           
+        }
+        // create and fill the details for anish and suresh
+    let anishform = new Railwayform("anish", 12342)
+let sureshform = new Railwayform("suresh" , 121212)
+//anishform.fill("anish", 12232) // if without using the fill if we submit the form then it will show that  value as undefined 
+// sureshform.fill("suresh",11223) 
+ anishform.submit()
+sureshform.submit()
+sureshform.cancel()
+
+/*                                                      construtor  
+
+1.What is a Constructor in a Class?
+A constructor is a special method in a class that is automatically called when an object (instance) is created. Its purpose is to 
+initialize the object and set up any properties or initial behaviors.
+
+Key Features of a Constructor:
+Special Syntax:
+
+Written as constructor() in the class.
+It can accept parameters for custom initialization.
+Automatic Invocation:
+
+When you create an object using new ClassName(), the constructor runs automatically.
+Unique Rules:
+
+A class can only have one constructor.
+It cannot be a getter, setter, async, or generator function.
+Parent Class Handling:
+
+In a derived class, you must call the parent class's constructor using super() before accessing this.
+Syntax:
+javascript
+Copy code
+class ClassName {
+  constructor(param1, param2) {
+    // Initialize object properties
+    this.property1 = param1;
+    this.property2 = param2;
+  }
+}
+Example:
+javascript
+Copy code
+class Person {
+  constructor(name) {
+    this.name = name; // Initialize the name property
+  }
+
+  introduce() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+}
+
+const john = new Person("John"); // Constructor is called
+john.introduce(); // Output: Hello, my name is John
+Default Constructor:
+If no constructor is defined, a default constructor is used:
+
+For base classes, it’s an empty constructor:
+javascript
+Copy code
+constructor() {}
+For derived classes, it calls the parent’s constructor:
+javascript
+Copy code
+constructor(...args) {
+  super(...args);
+}
+Advanced Notes:
+Custom Parent Constructor Call: In derived classes, you must explicitly call the parent class constructor using super():
+
+javascript
+Copy code
+class Child extends Parent {
+  constructor(value) {
+    super(value); // Call parent constructor
+    this.childProperty = "Child-specific value";
+  }
+}
+Default Values:
+Constructors can have default parameter values:
+
+javascript
+Copy code
+class Person {
+  constructor(name = "Anonymous") {
+    this.name = name;
+  }
+}
+const p = new Person(); // Default name: "Anonymous"
+Summary:
+Constructor initializes object properties when an instance is created.
+Must call super() in derived classes before using this.
+A class can only have one constructor, but it can handle complex initialization tasks
+
+*/ 
+    </script>
+</body>
+</html>
