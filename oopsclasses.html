@@ -57,10 +57,39 @@ Why Use Classes?
 Classes provide a clean and organized syntax for defining object blueprints.
 They help encapsulate properties and methods, making code more modular and reusable.
 The structure mimics classical object-oriented programming, which is familiar to developers from other programming languages.
+
+agr railway form(class) m apni details bhr di to wo us template classes ko hmne object ki trh use kr lia 
+
         */
+class Railwayform{
+    submit(){
+        alert(this.name + ": form is submitted with train number :" + this.traino  )
+    }
+    cancel(){
+        alert(this.name + " : form is cancelled with train number :" + this.traino)
+    }
+    fill(givename,traino){
+          this.name = givename
+          this.traino = traino
+    }
+
+}
+// 1. create a form for anish and suresh
+let anishform = new Railwayform() // An instance is a specific object created from a class here 'new' creates a instane of railway form
+                             //() The parentheses are used to call the constructor of the class Railwayform.
+let sureshform = new Railwayform()
+// 2.  fill the form with details in both anish and suresh form
+anishform.fill("anish", 12232)
+sureshform.fill("suresh",11223)
+// action are taken here 
+anishform.submit()
+sureshform.submit()
+sureshform.cancel()
 
 
-        
+
+
+
     </script>
 </body>
-</html>
+</html>  
