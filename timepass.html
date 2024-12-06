@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timepass
+    </title>
+</head>
+<body>
+    <script>
+        class daruform{
+            constructor(name,ordernum,QTY){
+                this.name = name 
+                this.ordernum = ordernum 
+                this.QTY = QTY
+            }
+         order(){
+            alert(`${this.name} your form is submitted `)
+         }
+        }
+        class daruform1 extends daruform{
+            order1(){
+         alert(`${this.name} your form  is  verified with relvant details and your ordernumber is ${this.ordernum}`)
+            }
+        }
+        class daruform2 extends daruform1{
+        order2(){
+            alert(`order having order number ${this.ordernum} and qunatity ${this.QTY} is completed pls collect from the counter`)
+        }
+        }
+    let a = new daruform("anish")
+     let d = new daruform("suraj")
+      let b = new daruform1("anish","1233")
+      let e = new daruform1("suraj","1234")
+      let c = new daruform2("anish","1233","5")
+      let q = new daruform2("suraj","1234","11")
+
+      a.order()
+      d.order()
+      b.order1()
+      e.order1()
+      c.order2()
+      q.order2()
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         classes are like a templates 
+        */
+
+        class namee{
+            constructor(name, rollnum,college){
+                this.name = namee.capitalize(name) 
+                this.rollnum = rollnum
+                this.college = namee.capitalize(college)
+                 console.log("constructr is running this time ")
+                 
+            }
+            static capitalize(name){
+                return name.toUpperCase();
+            }
+            
+call(){
+    console.log("my name is " + `${this.name}` + " and my rollnumber is " + `${this.rollnum}` + " and my collge name is " + `${this.college}`)
+}
+        }
+        class namkaran extends namee{
+              
+            collegename(){
+                console.log("my college name is " + `${this.college}` + " and my name is " + `${this.name}` + " and my roll number is " + `${this.rollnum}`)
+            }
+        }
+        let a = new namkaran("anish","23/ME/049","dtu")
+        a.call()
+        a.collegename()
+        class jj extends namkaran{
+      rat(){
+        console.log(`hey my name is ${this.name} and my collge hai to kaafi dur but name h uska ${this.college} and my roll number is ${this.rollnum}`)
+      }
+        } // this above is the example of inheritance 
+        let c = new jj("anish","049","dtu")
+        c.rat()
+
+
+    </script>
+</body>
+</html>
