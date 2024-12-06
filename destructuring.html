@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // this is called as destructring
+let arr = [2,3]
+let [c,d] = arr // values give according to who comes first type 
+console.log(c)
+console.log(d)
+ let a = [1,2,34,5,5,6,7]
+let [f,g,h, ...rest] = a // the rest of the values will be assing to the array 
+console.log(f,g,h,rest)
+let obj = {...a} // this will form key value pairs 
+console.log(obj)
+// function ko 3 values pass krna ho array k through   this is called spread syntax
+function sum(v1,v2,v3){ 
+    return v1+v2+v3  // this will take the first 3 values of the array and add them accordingly in this case 1+2+34 
+}
+console.log(sum(...a))  // this will give the sum of 37 
+
+// to change any specific thing in the object and the rest of the object will remain the same 
+
+let obj2 = {
+    name: "john",
+    age: 15,
+    class: 12,
+    place: "hari nagar" 
+}
+console.log({...obj2,name: "anish", age: 11}) //here the name is changes to anish while the rest of the object remains the same {...},similarly act for the age as well this works simply by overwriting 
+
+
+// local , FUNCTION AND GLOBAL SCOPE 
+
+// let has  a block lvl scope while var has a global scope 
+/*
+meaning 
+{ let a = 8}
+ console.log(a)  this will show an error as let have a  block lvl scope
+ while 
+ { var a  = 9}
+  console.log(a)  this will works perfectly
+
+  similarly function lvl scope remain inside the function
+
+*/   
+
+//                                                                 hosting
+
+/*
+Q..What is Hoisting in JavaScript?
+ANS => Hoisting is a JavaScript mechanism where variable and function declarations are moved ("hoisted") to the top of their scope during the compilation phase. This means that you can use variables and functions before you declare them in the code, though the behavior differs between var, let, const, and functions.
+
+Key Points:
+Only Declarations are Hoisted:
+
+Variables declared with var are initialized as undefined during hoisting.
+Variables declared with let and const are not initialized; accessing them before declaration results
+
+*/
+// example of hosting
+
+say() // used even before 
+function say(){
+    console.log("hello bhaii kya hal hai ")
+} // in hosting js only hosts declaration not initalization
+// meaning 
+console.log(z)
+var z; // this will not show any error 
+console.log(s)
+let s = 3; //  this will show an error 
+
+    </script>i
+</body>
+</html>
