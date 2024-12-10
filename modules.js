@@ -42,11 +42,86 @@ In short, npm install is a critical step to set up and manage Node.js projects e
 
 NOTE => 1. the informaation of generating the node modules comes under the package.json
        2. meaning of npm install (shortform "i" for install) meaning that the node js will search inside the package.json and 
-       download  the node modules form the dependencies 
-
-
-
-
-
+       download  the node modules form the dependencies
 
 */
+// required package 
+var pdf = require("pdf-node");
+var fs = require("fs");
+
+// read html template
+var html = fs.readFileSync("template.html","utf8");
+
+var options = {
+       format: "A3",
+       orientation: "portrait",
+       border: "10mm",
+       header: {
+           height: "45mm",
+           contents: '<div style="text-align: center;">Author: Shyam Hajare</div>'
+       },
+       footer: {
+           height: "28mm",
+           contents: {
+               first: 'Cover page',
+               2: 'Second page', // Any page number is working. 1-based index
+               default: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>', // fallback value
+               last: 'Last Page'
+           }
+       }
+   };
+   var users = [
+       {
+         name: "tom",
+         age: "21",
+       },
+       {
+         name: "dick",
+         age: "23",
+       },
+       {
+         name: "harry",
+         age: "29",
+       },
+     ];
+     var document = {
+       html: html,
+       data: {
+         users: users,
+       },
+       path: "./output.pdf",
+       type: "pdf",
+     };
+
+     pdf(document, options)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+  /*
+  How the Code Works
+1.The template.html file is read into a string (html).
+2.The options object specifies the layout, headers, and footers for the PDF.
+3.User data (users) is passed into the document object, where it is dynamically injected into the HTML template.
+4.The pdf function processes the document and options:
+5.Combines the HTML, dynamic data, and options to generate the PDF.
+6.Saves the PDF to the specified path (./output.pdf).
+7.If successful, a success message or result (res) is logged.
+8.If there’s an error, it is logged in the catch block.
+Use Case
+This code is ideal for dynamically generating PDFs with content such as:
+
+Reports.
+Invoices.
+User-specific documents (e.g., resumes, certificates).
+Output
+A PDF file (output.pdf) is created in the project directory.
+The file will include:
+Content based on the template.html file.
+Dynamic user data (users).
+Custom headers and footers as defined in options
+  
+  */
